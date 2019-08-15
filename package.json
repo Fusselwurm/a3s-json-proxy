@@ -1,0 +1,6 @@
+{
+	"description": "serve arma3sync as json",
+	"dependencies": {
+		"java.io": "^2.4.0"
+	}
+}
