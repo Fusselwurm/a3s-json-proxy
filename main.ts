@@ -28,16 +28,12 @@ function getFullFilePath(httpPath: string): string {
 }
 
 createServer({}, (req: IncomingMessage, res: ServerResponse) => {
-
-
-    let filename = getFullFilePath(req.url)
-    var buf = readFileSync(filename)
+    const filename = getFullFilePath(req.url)
+    const buf = readFileSync(filename);
     console.debug(`buf length: ${buf.length} for file ${filename}`)
     gunzip(buf, (err,data) => {
-
-        var inStream = new InputObjectStream(data)
-         console.log(inStream)
-        var obj = inStream.readObject()
+        const inStream = new InputObjectStream(data);
+        const obj = inStream.readObject();
 
         res.write(JSON.stringify(obj))
         res.end()
