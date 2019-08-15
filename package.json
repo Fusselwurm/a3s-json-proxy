@@ -1,6 +1,9 @@
 {
-	"description": "serve arma3sync as json",
+	"description": "serves arma3sync repository config as json",
 	"dependencies": {
 		"java.io": "^2.4.0"
+	},
+	"devDependencies": {
+		"@types/node": "^12.7.2"
 	}
 }
