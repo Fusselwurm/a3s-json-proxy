@@ -1,0 +1,27 @@
+GET http://localhost:8080/
+
+###
+
+GET http://localhost:8080/.a3s/events.json
+
+###
+
+GET http://localhost:8080/.a3s/foo.json
+
+###
+
+GET http://localhost:8080/.a3s/changelogs.json
+
+###
+
+GET http://localhost:8080/.a3s/serverinfo.json
+
+###
+
+GET http://localhost:8080/.a3s/sync.json
+
+###
+
+GET http://localhost:8080/.a3s/autoconfig.json
+
+###

@@ -54,7 +54,14 @@ createServer({}, (req: IncomingMessage, res: ServerResponse) => {
         const inStream = new InputObjectStream(data);
         const obj = inStream.readObject();
 
-        res.write(JSON.stringify(obj, null, config.pretty ? "\t" : undefined))
+        const replacer = (k: string, v: any): any => {
+            if (k === 'parent') {
+                return undefined
+            }
+            return v
+        }
+
+        res.write(JSON.stringify(obj, replacer, config.pretty ? "\t" : undefined))
         res.end()
     })
 }).listen(config.port)
