@@ -61,6 +61,7 @@ createServer({}, (req: IncomingMessage, res: ServerResponse) => {
             return v
         }
 
+        res.writeHead(200, {"Content-Type": "application/json"})
         res.write(JSON.stringify(obj, replacer, config.pretty ? "\t" : undefined))
         res.end()
     })
