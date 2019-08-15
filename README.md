@@ -3,9 +3,10 @@ If you'd like to be able to serve **repository configs in human-readable form**,
 
 # the short of it
 
-* configure nginx to proxy all requests for `$repository/.a3s/*.json` files via `$port`
-* copy config.example.json to config.json , adjust repositoryPath to match `$repository` and port to `$port`
+* configure nginx to proxy all requests for `$repository/.a3s/*.json` files via `$port`: see `a3s.nginx-vhost.conf` as example
+* copy `config.example.json` to `config.json` , adjust `repositoryPath` to match `$repository` and port to `$port`
 * npm install
 * compile typescript
+    * todo: add to dev dependencies, build script
 * node main.js
 * yay

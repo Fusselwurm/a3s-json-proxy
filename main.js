@@ -55,3 +55,6 @@ http_1.createServer({}, function (req, res) {
     });
 }).listen(config.port);
 console.info("listening on " + config.port);
+process.on("beforeExit", function () {
+    console.info("goodbye");
+});

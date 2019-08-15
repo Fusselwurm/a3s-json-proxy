@@ -68,3 +68,7 @@ createServer({}, (req: IncomingMessage, res: ServerResponse) => {
 }).listen(config.port)
 
 console.info(`listening on ${config.port}`)
+
+process.on("beforeExit", () => {
+    console.info("goodbye")
+})

@@ -1,9 +1,18 @@
 {
+	"author": {
+		"name": "Fusselwurmo",
+		"email": "fusselwurm@gmail.com"
+	},
 	"description": "serves arma3sync repository config as json",
 	"dependencies": {
-		"java.io": "^2.4.0"
+		"java.io": "^2.4.0",
+		"@types/node": "^12.7.2",
+		"typescript": "^3.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "^12.7.2"
+	},
+	"scripts": {
+		"build": "node_modules/.bin/tsc",
+		"start": "node main.js"
 	}
 }
